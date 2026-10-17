@@ -1,0 +1,145 @@
+/* 1. Reset cơ bản (Đã sửa lỗi dấu - thành dấu *) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f7fa;
+}
+
+/* 2. Header & Footer (Màu Serenity đậm) */
+header, footer {
+  background-color: #6B82A8;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  color: #F7CAC9; /* Rose Quartz */
+  margin-bottom: 5px;
+}
+
+/* 3. Thanh menu điều hướng (Nav) */
+nav {
+  background-color: #4A5D7E;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  display: block;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover, nav a.active {
+  background-color: #F7CAC9; 
+  color: #4A5D7E;
+}
+
+/* 4. Khung bố cục 2 cột (Main & Aside) */
+.layout-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 15px;
+  display: flex;
+  gap: 20px;
+}
+
+main {
+  flex: 3;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+aside {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+/* 5. Tiêu đề, Thẻ sự kiện & Kích thước ảnh */
+h2 {
+  color: #4A5D7E;
+  border-bottom: 2px solid #F7CAC9;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #6B82A8;
+  margin: 15px 0 10px;
+}
+
+section {
+  margin-bottom: 25px;
+}
+
+/* Định dạng chung cho ảnh lẻ (ở trang About/Contact) */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin: 10px 0;
+}
+
+/* Lưới 2 ảnh thẳng hàng (ở trang index.html) */
+.image-grid {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.image-grid img {
+  width: calc(50% - 7.5px);   /* Chia đều 2 cột */
+  height: auto;               /* Tự động điều chỉnh chiều cao theo tỉ lệ ảnh gốc */
+  max-height: 480px;          /* Chiều cao tối đa đủ để chứa hết ảnh dọc */
+  object-fit: contain;        /* HIỂN THỊ TOÀN BỘ ẢNH - Không bị cắt mất bất kỳ pixel nào */
+  background-color: #f8fafc;  /* Màu nền nhẹ làm nổi bật ảnh */
+  border-radius: 8px;
+}
+
+.event-card {
+  background-color: #fcf8fa;
+  border-left: 4px solid #F7CAC9;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+table th {
+  background-color: #92A8D1;
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background-color: #f5a8a8;
+}
